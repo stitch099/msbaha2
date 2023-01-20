@@ -80,23 +80,37 @@ button span{
     transition: 0.4s ease-out;
 }
 
-button[data-action = "reset"]{
+#reset{
     color: white;
     opacity: 0.5;
 }
 
-button[data-action = "reset"]:hover{
+#reset:hover{
      opacity: 1;
 }
 
-button[data-action = "save"]{
+#save{
     opacity: 0.7;
 }
 
-button[data-action = "save"]:hover{
+#save:hover{
     opacity: 1;
 }
 
 button:active {
     transform: scale(1.1);
+}
+
+.setValue {
+    margin-top: 2rem;
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.setValue button {
+    color: var(--dark);
 }

@@ -9,35 +9,45 @@
     <script src="script.js"></script>
 </head>
 <body>
-        <main>
-        <h2>الحمدلله</h2>
-        <p>
-            Masbaha
-        </p>
-    <div class="counter">
-        <div class="counter-value">0</div>
-        <div class="counter-controls">
+    <main>
+            <h2>الحمدلله</h2>
+            <p>
+                Masbaha
+            </p>
+        <div class="counter">
+            <div class="counter-value" id="count">0</div>
+            <div class="counter-controls">
 
-            <button data-action="save">
-                <span>
-                    Save
-                </span>
-            </button>
+                <button type="button"  id="increase" onclick="increase()">
+                    <span>
+                        Increase
+                    </span>
+                </button>
 
-            <button data-action="reset">
-                <span>
-                    Reset
-                </span>
-            </button>
+                <button type="button" id="reset" onclick="reset()">
+                    <span>
+                        Reset
+                    </span>
+                </button>
 
-            <button data-action="increase">
-                <span>
-                    Increase
-                </span>
-            </button>
-
+                <!-- <button type="button" id="save" onclick="save()">
+                    <span>
+                    Save 
+                    </span>
+                </button> -->
+            </div>
         </div>
-    </div>
+        <!-- <div class="setValue">
+
+            <button type="button" id="load" onclick="load()">
+                Load
+            </button>
+
+            <button type="button" id="clear" onclick="clear()">
+                Clear
+            </button>
+
+        </div> -->
     </main>    
 </body>
 </html>

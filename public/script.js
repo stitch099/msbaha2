@@ -1,4 +1,4 @@
-let count = 0;
+var count = 0;
 
 function increase() {
     setValue(count += 1);

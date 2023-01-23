@@ -136,3 +136,11 @@ button:active {
     grid-template-columns: repeat(10, 3rem ) ;
     grid-template-rows: repeat(10, 3rem );
 }
+
+.no-text-select {
+    user-select: none;
+}
+
+/* .img {
+    size-adjust: 1rem;
+} */

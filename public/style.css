@@ -25,8 +25,8 @@ main{
 }
 
 h2{
-    color: var(--dark);
-    font-size: 4rem;
+    color: var(--secondary);
+    font-size: 6rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }
@@ -41,21 +41,32 @@ p{
 .counter{
     background-color: var(--dark);
     padding: 1rem;
-    border-radius: 1rem;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
     color: white;
+    text-align: center;
 }
 
 .counter-value{
-    font-size: 8rem;
+    font-size: 10rem;
     font-weight: 700;
     text-align: center;
 }
 
 .counter-controls{
+    background-color: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 -0.5rem;
+
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+
+    grid-column: 10 / 11;
+    grid-row: 10 / 11;
 }
 .counter-controls button{
     margin: 0 0.5rem;
@@ -68,7 +79,7 @@ button{
     outline: none;
 
     color: var(--primary);
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
 
@@ -113,4 +124,15 @@ button:active {
 
 .setValue button {
     color: var(--dark);
+}
+
+.grid-container {
+    background-color: none;
+
+    width: 30rem;
+    height: 30rem;
+
+    display: grid;
+    grid-template-columns: repeat(10, 3rem ) ;
+    grid-template-rows: repeat(10, 3rem );
 }

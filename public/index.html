@@ -9,46 +9,33 @@
 </head>
 <body>
     <main>
-            <h2>الحمدلله</h2>
             <p>
                 Masbaha
             </p>
-        <div class="counter">
-            <div class="counter-value" id="count">0</div>
-            <div class="counter-controls">
+        <div class="grid-container">
 
-                <button type="button"  id="increase" onclick="increase()">
-                    <span>
-                        Increase
-                    </span>
-                </button>
+            <div class="counter" onclick="increase()">
 
-                <button type="button" id="reset" onclick="reset()">
-                    <span>
-                        Reset
-                    </span>
-                </button>
-                <!-- <button type="button" id="save" onclick="main()">
-                    <span>
-                    Save 
-                    </span>
-                </button> -->
+                    <h2>الحمدلله</h2>
+
+                <div class="counter-value" id="count">
+                    0
+                </div>
+            
             </div>
-        <!-- </div>
-        <div class="setValue">
 
-            <button type="button" id="load" onclick="load()">
-                Load
-            </button>
+                <div class="counter-controls">
 
-            <button type="button" id="clear" onclick="clear()">
-                Clear
-            </button>
+                    <button type="button" id="reset" onclick="reset()">
+                        <span>
+                            Reset
+                        </span>
+                    </button>
 
-        </div> -->
+                </div>
+
+        </div>
     </main> 
-    
     <script src="script.js"></script>
-        
 </body>
 </html>

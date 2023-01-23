@@ -8,27 +8,23 @@ function reset() {
     setValue(count = 0);
 };
 
+// helper functions
+
 function save() {
     localStorage.setItem("count", count);
 };
 
 function updateView(){
     document.querySelector("#count").innerHTML = count;
-}
-// function load() {
-//     localStorage.getItem("count", count);
-    
-// };
-
-// function clear() {
-//     localStorage.clear();
-// };
+};
 
 let setValue = (value) =>{
     count = value;
     save();
-    document.getElementById("count").innerHTML = count; 
+    updateView(); 
 };
+
+// main function
 
 let main = () =>{
     let counter = localStorage.getItem("count");

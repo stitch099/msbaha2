@@ -29,6 +29,8 @@ h2{
     font-size: 6rem;
     text-transform: uppercase;
     margin-bottom: 1rem;
+
+    grid-row: 2 / 3;
 }
 
 p{
@@ -45,13 +47,18 @@ p{
     height: 30rem;
     border-radius: 50%;
     color: white;
+    display: grid;
+    justify-content: center;
     text-align: center;
+    grid-template-rows: repeat(4 , 5rem);
 }
 
 .counter-value{
     font-size: 10rem;
     font-weight: 700;
     text-align: center;
+
+    grid-row: 3 / 5;
 }
 
 .counter-controls{
@@ -140,7 +147,9 @@ button:active {
 .no-text-select {
     user-select: none;
 }
-
-/* .img {
-    size-adjust: 1rem;
+/* 
+.text-grid {
+    background-color: pink;
+    grid-column: 3 / 7;
+    grid-row: 4 / 6;
 } */

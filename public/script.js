@@ -1,8 +1,8 @@
-var count = 0;
+let count = 0;
 
 function increase() {
     setValue(count += 1);
-}
+};
 
 function reset() {
     setValue(count = 0);
@@ -36,3 +36,8 @@ let main = () =>{
 };
 
 main();
+
+function getSelectValue(){
+    let selectedValue = document.querySelector("#selector").value;
+    reset(); 
+}

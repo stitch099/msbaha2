@@ -1,0 +1,24 @@
+{
+  "masabeh": {
+    "ist8far_jama3i_1": {
+      "count": 0,
+      "name": "hamlat ist8far jama3i"
+    }
+  },
+  "users": {
+    "user1": {
+      "email": "stitchy@gmail.com",
+      "firstname": "leen",
+      "lastname": "shehab",
+      "notification_token_id": "ibauaorjgf",
+      "phone": 792897287
+    },
+    "user2": {
+      "email": "sidani@gmail.com",
+      "firstname": "yousif",
+      "lastname": "sidani",
+      "notification_token_id": "joaibgoiyoina",
+      "phone": 72987503
+    }
+  }
+}

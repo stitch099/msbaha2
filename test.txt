@@ -1,0 +1,21 @@
+{
+"users": 
+{
+"user1": {
+"email": 'stitchy@gmail.com', 
+"firstname": "asldkfj", 
+"lastname": "laksdjf", 
+"phone": "0982304892",
+"notification_token_id": "lasdjflsdajflkj", 
+}
+}
+{
+"user2": {
+    "email": "sidani@gmail.com"
+    "firstname":"abjad"
+    "lastname": "hawaz"
+    "phone": "897926626"
+    "notification_token_id": "jaoihavohao"
+}
+}
+}

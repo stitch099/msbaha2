@@ -12,39 +12,83 @@
 </head>
 <body>
     <main>
-            <select class="form-select" aria-label="Default select example" class="h-25 w-50" id="selector" onchange="getSelectValue()">
+            <!-- <select class="form-select" aria-label="Default select example" class="h-25 w-50" id="selector" onchange="getSelectValue()">
                 <option selected>لا اله الا الله</option>
                 <option value="1">الحمدلله</option>
                 <option value="2">سبحان الله </option>
                 <option value="3">اللهم صلي و سلم على سيدنا محمد</option>
-            </select> 
-            <p>
+            </select>  -->
+            <!-- <p>
                 Masbaha
-            </p>
-           
-
-        <div class="grid-container no-text-select" >
-            
-            <div class="counter" onclick="increase()">
-                    <!-- <h2>الحمدلله</h2> -->
-
-                    <div class="counter-value" id="count">
-                        0
+            </p> -->
+        <div class="container no-text-select">
+            <div class="row row-cols-lg-3 row-cols-xlg-4">
+                <div class="col">
+                    <div class="card card1 border border-2 border-secondary">
+                        <div class="card-header"><h2 id="header">سبحان الله</h2></div>
+                        <div class="counter" onclick="increase()">
+                            <div class="counter-value" id="count">0</div>
+                        </div>
+                        <div class="counter-controls" onclick="reset()">
+                            <button type="button" id="reset">
+                                <span>
+                                    <i class="fa-solid fa-rotate-left"></i> 
+                                </span>
+                            </button>
+                        </div> 
                     </div>
-
-            </div>
-
-                <div class="counter-controls" onclick="reset()">
-
-                    <button type="button" id="reset">
-                        <span>
-                            <i class="fa-solid fa-rotate-left"></i>
-                        </span>
-                    </button>
-
                 </div>
 
-        </div>
+                <div class="col">
+                    <div class="card card2 border border-2 border-secondary">
+                        <div class="card-header"><h2 id="header">الحمدلله</h2></div>
+                        <div class="counter" onclick="increaseTwo()">
+                            <div class="counter-value" id="countTwo" >0</div>
+                        </div>
+                        <div class="counter-controls" onclick="resetTwo()">
+                            <button type="button" id="reset">
+                                <span>
+                                    <i class="fa-solid fa-rotate-left"></i> 
+                                </span>
+                            </button>
+                        </div> 
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="card card3 border border-2 border-secondary">
+                        <div class="card-header"><h2 id="header">لا اله الا الله</h2></div>
+                        <div class="counter" onclick="increaseThree()">
+                            <div class="counter-value" id="countThree">0</div>
+                        </div>
+                        <div class="counter-controls" onclick="resetThree()">
+                            <button type="button" id="reset">
+                                <span>
+                                    <i class="fa-solid fa-rotate-left"></i> 
+                                </span>
+                            </button>
+                        </div> 
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card card4 border border-2 border-secondary">
+                        <div class="card-header"><h2 id="header">الله اكبر</h2></div>
+                        <div class="counter" onclick="increaseFour()">
+                            <div class="counter-value" id="countFour">0</div>
+                        </div>
+                        <div class="counter-controls" onclick="resetFour()">
+                            <button type="button" id="reset">
+                                <span>
+                                    <i class="fa-solid fa-rotate-left"></i> 
+                                </span>
+                            </button>
+                        </div> 
+                    </div>
+                </div>
+
+            </div>
+        </div> 
     </main> 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

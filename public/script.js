@@ -90,7 +90,7 @@ function increaseThree(){
     setValueThree(count3 += 1);
 };
 
-function resetTwo(){
+function resetThree(){
     setValueThree(count3 = 0);
 };
 

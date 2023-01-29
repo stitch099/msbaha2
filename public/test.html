@@ -30,6 +30,41 @@
         <div class="msbha-text">سبحان الله</div>
         <div class="msbha-count">0</div>
     </div> -->
+    <script>
+
+
+    onsubmit1 = (e) => {
+        e.preventDefault();
+
+        // random text 
+        let randomId = Math.floor(Math.random() * 100000000 + 999) + '';
+        let newTitle = document.querySelector('#newText').value;
+        if (newTitle == '') {
+            alert('الرجاء إدخال النص');
+            return;
+        }
+
+        console.log("sk debug")
+        console.log(newTitle);
+        console.log(randomId)
+
+        let newCounter = {
+            id: randomId, 
+            title: newTitle,
+            count: 0,
+        }
+
+        // empty #newText text box
+        document.querySelector('#newText').value = '';
+
+        counters.push(newCounter);
+        renderCounters();
+        saveData();
+
+        // e.preventDefault();
+        // alert('salamato')
+    }
+</script>
 
     <script>
 

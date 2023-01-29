@@ -12,32 +12,8 @@
 </head>
 <body>
     <main>
-            <!-- <select class="form-select" aria-label="Default select example" class="h-25 w-50" id="selector" onchange="getSelectValue()">
-                <option selected>لا اله الا الله</option>
-                <option value="1">الحمدلله</option>
-                <option value="2">سبحان الله </option>
-                <option value="3">اللهم صلي و سلم على سيدنا محمد</option>
-            </select>  -->
-            <!-- <p>
-                Masbaha
-            </p> -->
         <div class="container no-text-select">
             <div class="row row-cols-lg-3 row-cols-xlg-4">
-                <div class="col">
-                    <div class="card card1 border border-2 border-secondary">
-                        <div class="card-header"><h2 id="header">سبحان الله</h2></div>
-                        <div class="counter" onclick="increase()">
-                            <div class="counter-value" id="count">0</div>
-                        </div>
-                        <div class="counter-controls" onclick="reset()">
-                            <button type="button" id="reset">
-                                <span>
-                                    <i class="fa-solid fa-rotate-left"></i> 
-                                </span>
-                            </button>
-                        </div> 
-                    </div>
-                </div>
 
                 <div id="addHere"></div>
 
@@ -50,20 +26,24 @@
                                     <label for="tasbeeh" class="form-label">
                                         اضافة صيغة التسبيح
                                     </label>
-                                <div class="input-group-append"> 
+                                    <div class="empty-counter">
+                                        <div class="circular-empty" onclick="">
+                                            <div class="plus" id="submit">
+                                                <!-- <input type="submit" id="submit"> -->
+                                                    <i class="fa-solid fa-plus fa-5x" style="color: white;"></i>
+                                                <!-- </input> -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                <!-- <div class="input-group-append"> 
                                     <input class="btn btn-secondary" id="submit"><i class="fa-solid fa-check"></i></input>
-                                </div> 
+                                </div>  -->
                             </div>
                                
                             </form>
                         </div>
-                        <div class="empty-counter">
-                            <div class="circular-empty" onclick="">
-                                <div class="plus">
-                                    <i class="fa-solid fa-plus fa-5x" style="color: white;"></i>
-                                </div>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div> 

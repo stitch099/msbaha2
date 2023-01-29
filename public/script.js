@@ -1,167 +1,134 @@
-// counter number one
+// // counter number one
 
-let count = 0;
+// let count = 0;
 
-function increase() {
-    setValue(count += 1);
+// function increase() {
+//     setValue(count += 1);
+// };
+
+// function reset() {
+//     setValue(count = 0);
+// };
+
+// // helper functions
+
+// function save() {
+//     localStorage.setItem("count", count);
+// };
+
+// function updateView(){
+//     document.querySelector("#count").innerHTML = count;
+// };
+
+// let setValue = (value) =>{
+//     count = value;
+//     save();
+//     updateView(); 
+// };
+
+// // main function
+
+// let main = () =>{
+//     let counter = localStorage.getItem("count");
+//     if (counter == null){
+//         setValue(counter = 0);
+//     }else{
+//         setValue(counter = parseInt(counter));
+//     };
+// };
+
+// main();
+
+let dataValues = [
+    {
+        id: 'count',
+        tittle: 'سبحان الله',
+        count: 0,
+    },
+    {
+        id: 'count2',
+        tittle: 'الحمدلله',
+        count: 0,
+    },
+]
+
+let renderMasbaha = (data) =>{
+    return `
+        <div class="col">
+            <div class="card card1 border border-2 border-secondary">
+                <div class="card-header"><h2 id="header">${data.tittle}</h2></div>
+                <div class="counter" onclick="increase('${data.id}')">
+                    <div class="counter-value" id="${data.id}">${data.count}</div>
+                </div>
+                <div class="counter-controls" onclick="reset('${data.id}')">
+                    <button type="button" id="reset">
+                        <span>
+                            <i class="fa-solid fa-rotate-left"></i> 
+                        </span>
+                    </button>
+                </div> 
+            </div>
+        </div>
+    `
 };
 
-function reset() {
-    setValue(count = 0);
+let renderMasbahas = () =>{
+    let value = '';
+    dataValues.forEach((data)=>{
+        value += renderMasbaha(data);
+    });
+    // console.log(value);
+
+    document.querySelector("#addHere").innerHTML = value;
+};
+renderMasbahas(dataValues);
+// console.log(renderMasbahas(dataValues));
+
+let saveData = ()=>{
+    localStorage.setItem('counter', JSON.stringify(dataValues));
 };
 
-// helper functions
-
-function save() {
-    localStorage.setItem("count", count);
+let loadData = () =>{
+    let data = localStorage.getItem('counter');
+    if(data){
+        dataValues = JSON.parse(data);
+    };
 };
 
-function updateView(){
-    document.querySelector("#count").innerHTML = count;
+let increase = (id) => {
+    // console.log(dataValues)
+    dataValues.find((data) => {
+        // console.log('id is ' + id);
+        // console.log('data.id is ' + data.id);
+        if (data.id === id) {
+            data.count++ ;
+            // console.log(data.count);
+        }
+    })
+    saveData();
+    renderMasbahas();
 };
 
-let setValue = (value) =>{
-    count = value;
-    save();
-    updateView(); 
+let reset = (id) =>{
+    dataValues.find((data) =>{     
+        if(data.id === id){
+            data.count = 0;
+        }
+    })
+    saveData();
+    renderMasbahas();
 };
-
-// main function
 
 let main = () =>{
-    let counter = localStorage.getItem("count");
-    if (counter == null){
-        setValue(counter = 0);
-    }else{
-        setValue(counter = parseInt(counter));
-    };
+        loadData();
+        renderMasbahas();
 };
 
 main();
 
-// counter number two
-
-
-let count2 = 0;
-
-function increaseTwo(){
-    setValueTwo(count2 += 1);
+let newId = math.floor(math.random()*1000000) + '';
+let newTittle = document.querySelector("#masbaha-name").value;
+if(newTittle == ''){
+    alert('الرجاء إدخال النص');
+    return;
 };
-
-function resetTwo(){
-    setValueTwo(count2 = 0);
-};
-
-// helper functions for card 2
-
-function saveTwo(){
-    localStorage.setItem("count2" , count2);
-};
-
-function updateViewTwo(){
-    document.querySelector("#countTwo").innerHTML = count2;
-};
-
-let setValueTwo = (valueTwo) =>{
-    count2 = valueTwo;
-    saveTwo();
-    updateViewTwo();
-};
-
-// main function for card Two
-
-let mainTwo = () =>{
-    let counter2 = localStorage.getItem("count2");
-    if(counter2 == null){
-        setValueTwo(counter2 = 0);
-    }else {
-        setValueTwo(counter2 = parseInt(counter2));
-    };
-};
-
-mainTwo();
-
-
-// counter number three
-
-let count3 = 0;
-
-function increaseThree(){
-    setValueThree(count3 += 1);
-};
-
-function resetThree(){
-    setValueThree(count3 = 0);
-};
-
-// helper functions for card 3
-
-function saveThree(){
-    localStorage.setItem("count3" , count3);
-};
-
-function updateViewThree(){
-    document.querySelector("#countThree").innerHTML = count3;
-};
-
-let setValueThree = (valueThree) =>{
-    count3 = valueThree;
-    saveThree();
-    updateViewThree();
-};
-
-// main function for card Three
-
-let mainThree = () =>{
-    let counter3 = localStorage.getItem("count3");
-    if(counter3 == null){
-        setValueThree(counter3 = 0);
-    }else {
-        setValueThree(counter3 = parseInt(counter3));
-    };
-};
-
-mainThree();
-
-
-// counter number four
-
-
-let count4 = 0;
-
-function increaseFour(){
-    setValueFour(count4 += 1);
-};
-
-function resetFour(){
-    setValueFour(count4 = 0);
-};
-
-// helper functions for card 4
-
-function saveFour(){
-    localStorage.setItem("count4" , count4);
-};
-
-function updateViewFour(){
-    document.querySelector("#countFour").innerHTML = count4;
-};
-
-let setValueFour = (valueFour) =>{
-    count4 = valueFour;
-    saveFour();
-    updateViewFour();
-};
-
-// main function for card Four
-
-let mainFour = () =>{
-    let counter4 = localStorage.getItem("count4");
-    if(counter4 == null){
-        setValueFour(counter4 = 0);
-    }else {
-        setValueFour(counter4 = parseInt(counter4));
-    };
-};
-
-mainFour();

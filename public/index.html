@@ -40,54 +40,31 @@
                 </div>
 
                 <div class="col">
-                    <div class="card card2 border border-2 border-secondary">
-                        <div class="card-header"><h2 id="header">الحمدلله</h2></div>
-                        <div class="counter" onclick="increaseTwo()">
-                            <div class="counter-value" id="countTwo" >0</div>
+                    <div class="card empty-card border border-2 border-secondary">
+                        <div class="card-header">
+                            <form> 
+                            <div class="form-floating input-group input-group-sm">
+                                    <input type="text" id="masbaha-name" class="form-control" placeholder="place tasbeeh here.">
+                                    <label for="tasbeeh" class="form-label">
+                                        اضافة صيغة التسبيح
+                                    </label>
+                                <div class="input-group-append"> 
+                                    <button class="btn btn-secondary" id="submit"><i class="fa-solid fa-check"></i></button>
+                                </div> 
+                            </div>
+                               
+                            </form>
                         </div>
-                        <div class="counter-controls" onclick="resetTwo()">
-                            <button type="button" id="reset">
-                                <span>
-                                    <i class="fa-solid fa-rotate-left"></i> 
-                                </span>
-                            </button>
-                        </div> 
+                        <div class="empty-counter">
+                            <div class="circular-empty" onclick="">
+                                <div class="plus">
+                                    <i class="fa-solid fa-plus fa-5x" style="color: white;"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="col">
-                    <div class="card card3 border border-2 border-secondary">
-                        <div class="card-header"><h2 id="header">لا اله الا الله</h2></div>
-                        <div class="counter" onclick="increaseThree()">
-                            <div class="counter-value" id="countThree">0</div>
-                        </div>
-                        <div class="counter-controls" onclick="resetThree()">
-                            <button type="button" id="reset">
-                                <span>
-                                    <i class="fa-solid fa-rotate-left"></i> 
-                                </span>
-                            </button>
-                        </div> 
-                    </div>
-                </div>
-
-                <div class="col">
-                    <div class="card card4 border border-2 border-secondary">
-                        <div class="card-header"><h2 id="header">الله اكبر</h2></div>
-                        <div class="counter" onclick="increaseFour()">
-                            <div class="counter-value" id="countFour">0</div>
-                        </div>
-                        <div class="counter-controls" onclick="resetFour()">
-                            <button type="button" id="reset">
-                                <span>
-                                    <i class="fa-solid fa-rotate-left"></i> 
-                                </span>
-                            </button>
-                        </div> 
-                    </div>
-                </div>
-
-            </div>
+            </div> 
         </div> 
     </main> 
     <script src="script.js"></script>

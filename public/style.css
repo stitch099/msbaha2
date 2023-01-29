@@ -194,3 +194,23 @@ button:active {
     background-color: none;
 
 }
+
+.empty-counter {
+    width: 100%;
+    /* height: 285px; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circular-empty {
+   background-color: var(--dark);
+   width: 14rem;
+   height: 14rem;
+   border-radius: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+}
+

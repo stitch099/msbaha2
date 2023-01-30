@@ -1,44 +1,3 @@
-// // counter number one
-
-// let count = 0;
-
-// function increase() {
-//     setValue(count += 1);
-// };
-
-// function reset() {
-//     setValue(count = 0);
-// };
-
-// // helper functions
-
-// function save() {
-//     localStorage.setItem("count", count);
-// };
-
-// function updateView(){
-//     document.querySelector("#count").innerHTML = count;
-// };
-
-// let setValue = (value) =>{
-//     count = value;
-//     save();
-//     updateView(); 
-// };
-
-// // main function
-
-// let main = () =>{
-//     let counter = localStorage.getItem("count");
-//     if (counter == null){
-//         setValue(counter = 0);
-//     }else{
-//         setValue(counter = parseInt(counter));
-//     };
-// };
-
-// main();
-
 let dataValues = [
     {
         id: 'count',
@@ -52,10 +11,38 @@ let dataValues = [
     },
 ]
 
+onsubmit1 = (e) =>{
+    e.preventDefault();
+
+
+    let newId = Math.floor(Math.random()*1000000) + '';
+
+    let newTittle = document.querySelector("#masbaha-name").value;
+
+    if(newTittle == ''){
+        alert('الرجاء إدخال النص');
+        // return;
+    };
+
+    let newCounter = {
+        id: newId,
+        tittle: newTittle,
+        count: 0,
+    }
+
+    document.querySelector('#masbaha-name').value = '';
+
+    dataValues.push(newCounter);
+    renderMasbahas();
+    saveData();
+};
+
+
 let renderMasbaha = (data) =>{
     return `
         <div class="col">
             <div class="card card1 border border-2 border-secondary">
+                <div class="remove border border-secondary" onclick="remove('${data.id}')"><i class="fa-solid fa-x"></i></div>
                 <div class="card-header"><h2 id="header">${data.tittle}</h2></div>
                 <div class="counter" onclick="increase('${data.id}')">
                     <div class="counter-value" id="${data.id}">${data.count}</div>
@@ -126,9 +113,12 @@ let main = () =>{
 
 main();
 
-let newId = math.floor(math.random()*1000000) + '';
-let newTittle = document.querySelector("#masbaha-name").value;
-if(newTittle == ''){
-    alert('الرجاء إدخال النص');
-    return;
-};
+let remove = (id) => {
+    dataValues.find((data) =>{
+        if(data.id === id){
+            data.remove();
+            console.log(dataValues);
+        }
+    });
+    console.log(dataValues);
+}

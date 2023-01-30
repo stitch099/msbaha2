@@ -13,39 +13,21 @@
 <body>
     <main>
         <div class="container no-text-select">
-            <div class="row row-cols-lg-3 row-cols-xlg-4">
-
-                <div id="addHere"></div>
-
-                <div class="col">
-                    <div class="card empty-card border border-2 border-secondary">
-                        <div class="card-header">
-                            <form> 
-                            <div class="form-floating input-group input-group-sm">
-                                    <input type="text" id="masbaha-name" class="form-control" placeholder="place tasbeeh here.">
-                                    <label for="tasbeeh" class="form-label">
-                                        اضافة صيغة التسبيح
-                                    </label>
-                                    <div class="empty-counter">
-                                        <div class="circular-empty" onclick="">
-                                            <div class="plus" id="submit">
-                                                <!-- <input type="submit" id="submit"> -->
-                                                    <i class="fa-solid fa-plus fa-5x" style="color: white;"></i>
-                                                <!-- </input> -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                <!-- <div class="input-group-append"> 
-                                    <input class="btn btn-secondary" id="submit"><i class="fa-solid fa-check"></i></input>
-                                </div>  -->
-                            </div>
-                               
-                            </form>
-                        </div>
-                        
+            <div class="card ">
+                <form onsubmit="return onsubmit1(event)"> 
+                    <div class="input-group input-group-sm">
+                            <label for="tasbeeh" class="form-label">
+                                اضافة صيغة التسبيح
+                            </label>
+                            <input type="text" id="masbaha-name" class="form-control" value="">
+                            <input type="submit" value="إضافة">
                     </div>
-                </div>
+                </form>
+
+            </div>
+
+            <div class="row row-cols-2 row-cols-lg-3 row-cols-xlg-4 ">
+                <div id="addHere"></div>
             </div> 
         </div> 
     </main> 

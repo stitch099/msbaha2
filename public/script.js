@@ -69,7 +69,7 @@ let renderMasbahas = () =>{
     document.querySelector("#addHere").innerHTML = value;
 };
 renderMasbahas(dataValues);
-// console.log(renderMasbahas(dataValues));
+
 
 let saveData = ()=>{
     localStorage.setItem('counter', JSON.stringify(dataValues));
@@ -114,11 +114,11 @@ let main = () =>{
 main();
 
 let remove = (id) => {
-    dataValues.find((data) =>{
-        if(data.id === id){
-            data.remove();
-            console.log(dataValues);
-        }
-    });
+
+    dataValues = dataValues.filter((data) =>data.id !== id)
+    
     console.log(dataValues);
+    
+    renderMasbahas();
+    saveData();
 }

@@ -121,4 +121,8 @@ let remove = (id) => {
     
     renderMasbahas();
     saveData();
-}
+;}
+
+function openWhatsApp() {  
+    window.open('https://wa.me/?text=https://masbaha2.web.app/');  
+};  

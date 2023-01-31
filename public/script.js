@@ -124,5 +124,5 @@ let remove = (id) => {
 ;}
 
 function openWhatsApp() {  
-    window.open('https://wa.me/?text=https://masbaha2.web.app/');  
-};  
+    window.open(`https://wa.me/?text= سبح معنا على هذا الموقع https://masbaha2.web.app/`);  
+};

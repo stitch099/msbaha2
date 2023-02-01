@@ -116,13 +116,18 @@ main();
 let remove = (id) => {
 
     dataValues = dataValues.filter((data) =>data.id !== id)
-    
+
     console.log(dataValues);
     
     renderMasbahas();
     saveData();
-;}
+};
 
 function openWhatsApp() {  
-    window.open(`https://wa.me/?text= سبح معنا على هذا الموقع https://masbaha2.web.app/`);  
+    openWhatsAppText(' سبح معنا على هذا الموقع https://masbaha2.web.app/');
+
+};
+
+function openWhatsAppText(text) {  
+    window.open(`https://wa.me/?text=${text}`);  
 };

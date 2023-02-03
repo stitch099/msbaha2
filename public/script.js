@@ -42,15 +42,15 @@ let renderMasbaha = (data) =>{
     return `
         <div class="col">
             <div class="card card1 border border-2 border-secondary">
-                <div class="remove border border-secondary" onclick="remove('${data.id}')"><i class="fa-solid fa-x"></i></div>
-                <div class="card-header"><h2 id="header">${data.tittle}</h2></div>
+                <div class="cancel border border-secondary" onclick="remove('${data.id}')"><i class="fa-solid fa-x"></i></div>
+                <div class="card-header header"><h2 id="header">${data.tittle}</h2></div>
                 <div class="counter" onclick="increase('${data.id}')">
-                    <div class="counter-value" id="${data.id}">${data.count}</div>
+                    <div class="count" id="${data.id}">${data.count}</div>
                 </div>
-                <div class="counter-controls" onclick="reset('${data.id}')">
-                    <button type="button" id="reset">
+                <div class="home-reset" onclick="reset('${data.id}')">
+                    <button type="button" class="reset" id="reset">
                         <span>
-                            <i class="fa-solid fa-rotate-left"></i> 
+                            <i class="fa-solid fa-rotate-left" id="cancel-reset"></i> 
                         </span>
                     </button>
                 </div> 
@@ -124,7 +124,7 @@ let remove = (id) => {
 };
 
 function openWhatsApp() {  
-    openWhatsAppText(' سبح معنا على هذا الموقع https://masbaha2.web.app/');
+    openWhatsAppText('https://masbaha2.web.app/');
 
 };
 

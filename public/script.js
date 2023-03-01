@@ -1,7 +1,7 @@
 const db = firebase.firestore();
 
 // // getting the objects from the database
-// db.collection('test').get().then((snapshot) => {
+// db.collection('counter').get().then((snapshot) => {
 //     let value = '';
 //     snapshot.docs.forEach((doc) => {
 //         console.log(doc.data());
@@ -11,7 +11,7 @@ const db = firebase.firestore();
 // });
 
 // real-time database 
-db.collection('test').onSnapshot((snapshot) => {
+db.collection('counter').onSnapshot((snapshot) => {
     let value = '';
     let changes = snapshot.docChanges();
     changes.forEach((change) => {
@@ -50,12 +50,12 @@ let renderMasbaha = (data) => {
 
 // increment function (increasing the counter)
 let increase = (id) => {
-    db.collection('test').get()
+    db.collection('counter').get()
         .then((snapshot) => {
             snapshot.docs.forEach(
                 (doc) => {
                     if (doc.data().id === id) {
-                        db.collection('test').doc(`${doc.id}`).update({
+                        db.collection('counter').doc(`${doc.id}`).update({
                             count: doc.data().count + 1
                         });
                     }
@@ -66,12 +66,12 @@ let increase = (id) => {
 
 // reset function (reseting the counter)
 let reset = (id) => {
-    db.collection('test').get()
+    db.collection('counter').get()
         .then((snapshot) => {
             snapshot.docs.forEach(
                 (doc) => {
                     if (doc.data().id === id) {
-                        db.collection('test').doc(`${doc.id}`).update({
+                        db.collection('counter').doc(`${doc.id}`).update({
                             count: 0
                         })
                     }
@@ -86,12 +86,12 @@ let remove = (id) => {
     // db.collection('counter') = db.collection('counter').filter((data) => data.id !== id)
 
     // console.log();
-    db.collection('test').get()
+    db.collection('counter').get()
         .then((snapshot) => {
             snapshot.docs.forEach(
                 (doc) => {
                     if (doc.data().id === id) {
-                        db.collection('test').doc(`${doc.id}`).delete();
+                        db.collection('counter').doc(`${doc.id}`).delete();
                     }
                 }
             )
@@ -110,7 +110,7 @@ onsubmit1 = (e) => {
     if (newTittle == '') {
         alert('الرجاء ادخال صيغة التسبيح ');
     } else {
-        db.collection('test').add({
+        db.collection('counter').add({
             count: 0,
             name: newTittle,
             id: newId

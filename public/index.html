@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="og:image" content="https://masbaha2.web.app/img/Masbaha_18.32.57.png">
-    <meta name="og:description" content=" سبح معنا على هذا الموقع!!! ">
-    <meta name="og:title" content="Masbaha by stitch">
-    <meta name="og:url" content="https://Masbaha2.web.app">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="og:image"
+      content="https://masbaha2.web.app/img/Masbaha_18.32.57.png"
+    />
+    <meta name="og:description" content=" سبح معنا على هذا الموقع!!! " />
+    <meta name="og:title" content="Masbaha by stitch" />
+    <meta name="og:url" content="https://Masbaha2.web.app" />
     <title>Masbaha</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <!-- <script>
         window.location = "https://awraduna.com/sura-kahf.html"
     </script> -->
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div class="whatsapp" onclick="openWhatsApp()"><i class="fa-brands fa-square-whatsapp fa-2xl"></i></div>
-                <form onsubmit="return onsubmit1(event)"> 
-                    <div class="input-group input-group-sm">
-                            <label for="tasbeeh" class="form-label">
-                                اضافة صيغة التسبيح
-                            </label>
-                            <input type="text" id="masbaha-name" class="form-control" value="">
-                            <input type="submit" value="إضافة">
-                    </div>
-                </form>
-        <div class="container no-text-select">
-            <div class="row row-cols-md-2 row-cols-lg-3 row-cols-xlg-4" id="addHere">
-            </div> 
-        </div> 
-    </main> 
+      <div class="whatsapp" onclick="openWhatsApp()">
+        <i class="fa-brands fa-square-whatsapp fa-2xl"></i>
+      </div>
+      <form onsubmit="return onsubmit1(event)">
+        <div class="input-group input-group-sm">
+          <label for="tasbeeh" class="form-label"> اضافة صيغة التسبيح </label>
+          <input type="text" id="masbaha-name" class="form-control" value="" />
+          <input type="submit" value="إضافة" />
+        </div>
+      </form>
+      <div class="container no-text-select">
+        <div
+          class="row row-cols-md-2 row-cols-lg-3 row-cols-xlg-4"
+          id="addHere"
+        ></div>
+      </div>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBeFQvZlPpxxIC5oQwiTyg-Icr4t3tDxlk",
+        authDomain: "masbaha2.firebaseapp.com",
+        databaseURL: "https://masbaha2-default-rtdb.firebaseio.com",
+        projectId: "masbaha2",
+        storageBucket: "masbaha2.appspot.com",
+        messagingSenderId: "841577294528",
+        appId: "1:841577294528:web:6e6a77b84f625ce07fdb25",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
